@@ -1,5 +1,6 @@
 @font-face {
   font-family: Inter, sans-serif;
+  font-display: swap;
   src: url(Inter-VariableFont_slnt,wght.ttf);
 }
 *,
@@ -47,6 +48,7 @@ h6 {
 }
 @font-face {
   font-family: Inter, sans-serif;
+  font-display: swap;
   src: url(Inter-VariableFont_slnt,wght.ttf);
 }
 .social {
