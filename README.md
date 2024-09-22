@@ -27,18 +27,20 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/ortiz-antonio/FM-slp)
-- Live Site URL: [Add live site URL here](https://ortiz-antonio.github.io/FM-slp/)
+- Parent Project: [https://github.com/ortiz-antonio/frontend-mentor](https://github.com/ortiz-antonio/frontend-mentor)
+- Solution URL: [https://github.com/ortiz-antonio/social-links-profile/](https://github.com/ortiz-antonio/social-links-profile/)
+- Live Site URL: [https://ortiz-antonio.github.io/social-links-profile/](https://ortiz-antonio.github.io/social-links-profile/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS Variables
+- SCSS
+- Pug
 - Flexbox
 - Mobile-first workflow
-- [Normalize.css](https://necolas.github.io/normalize.css/) - CSS Library
+- Taskfile
 
 ### What I learned
 
