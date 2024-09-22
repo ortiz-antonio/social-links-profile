@@ -1,0 +1,80 @@
+@import 'base';
+
+.social {
+  inline-size: 100%;
+  max-inline-size: pxToEm(350);
+  padding: $space-200;
+  background-color: $color-grey-800;
+  border: 1px solid $color-grey-800;
+  border-radius: 20px;
+
+  &__avatar {
+    max-inline-size: pxToEm(70);
+    margin-block-end: $space-200;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  &__header {
+    text-align: center;
+    &--name {
+      font-weight: 900;
+      font-size: 2em;
+    }
+    &--location {
+      margin-block: $space-100 $space-300;
+      color: $color-primary;
+      font-weight: 700;
+      font-size: 1.1em;
+    }
+    &--quote {
+      font-size: 1em;
+    }
+  }
+  &__links {
+    width: 100%;
+    margin-block-start: $space-200;
+    &--list {
+      padding: 0;
+      text-indent: 0;
+      list-style-type: none;
+      &-item--link {
+        display: block;
+        margin: $space-200;
+        padding: 0.7em;
+        color: $color-secondary;
+        font-weight: 900;
+        font-size: 1em;
+        text-align: center;
+        text-decoration: none;
+        background-color: $color-grey-700;
+        border-radius: 5px;
+      }
+      &-item--link:is(:hover, :focus) {
+        color: $color-grey-900;
+        background-color: $color-primary;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.footer {
+  margin-top: $space-300;
+}
+
+.attribution {
+  margin-inline: $space-300;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+
+    &--fm,
+    &--ortiz {
+      color: $color-primary;
+    }
+  }
+}
