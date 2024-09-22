@@ -17,9 +17,11 @@ $color-grey-800: hsl(0deg 0% 12%);
 $color-grey-900: hsl(0deg 0% 8%);
 $color-bg: $color-grey-900;
 
-$space-300: pxToRem(32);
+$space-300: pxToRem(24);
 $space-200: pxToRem(16);
-$space-100: pxToRem(8);
+
+$radius-m: 12px;
+$radius-s: 8px;
 
 $font-family: Inter, system-ui;
 $base-font-size: 16; //in px
@@ -60,18 +62,14 @@ $base-font-size: 16; //in px
   align-items: center;
 }
 
-%font-title {
-  @include font(24, 800, 1.5, 0);
+%font-heading {
+  @include font(24, 600, 1.5, 0);
 }
 
-%font-text2 {
-  @include font(15, 500, 1.5, 0);
+%font-body {
+  @include font(14, 400, 1.5, 0);
 }
 
-%font-text3 {
-  @include font(14, 500, 1.5, 0);
-}
-
-%font-text3-bold {
-  @include font(14, 800, 1.5, 0);
+%font-body-bold {
+  @include font(14, 700, 1.5, 0);
 }

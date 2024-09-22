@@ -2,32 +2,30 @@
 
 .social {
   inline-size: 100%;
-  max-inline-size: pxToEm(350);
-  padding: $space-200;
+  max-inline-size: pxToEm(327);
+  padding: $space-300;
   background-color: $color-grey-800;
-  border: 1px solid $color-grey-800;
-  border-radius: 20px;
+  border: 0px solid $color-grey-800;
+  border-radius: $radius-m;
 
   &__avatar {
-    max-inline-size: pxToEm(70);
-    margin-block-end: $space-200;
+    max-inline-size: pxToEm(88);
     border-radius: 50%;
     margin: 0 auto;
   }
   &__header {
+    margin-block-start: $space-300;
     text-align: center;
     &--name {
-      font-weight: 900;
-      font-size: 2em;
+      @extend %font-heading;
     }
     &--location {
-      margin-block: $space-100 $space-300;
       color: $color-primary;
-      font-weight: 700;
-      font-size: 1.1em;
+      @extend %font-body-bold;
+      margin-block-end: $space-300;
     }
     &--quote {
-      font-size: 1em;
+      @extend %font-body;
     }
   }
   &__links {
@@ -40,14 +38,13 @@
       &-item--link {
         display: block;
         margin: $space-200;
-        padding: 0.7em;
+        padding: 0.75em;
         color: $color-secondary;
-        font-weight: 900;
-        font-size: 1em;
+        @extend %font-body-bold;
         text-align: center;
         text-decoration: none;
         background-color: $color-grey-700;
-        border-radius: 5px;
+        border-radius: $radius-s;
       }
       &-item--link:is(:hover, :focus) {
         color: $color-grey-900;
