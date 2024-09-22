@@ -131,6 +131,12 @@ h6 {
 .attribution__content--ortiz {
   color: #c5f82a;
 }
+@media screen and (width>=37.5em) {
+  .social {
+    max-inline-size: 24em;
+    padding: 2.5rem;
+  }
+}
 body {
   flex-direction: column;
   justify-content: center;

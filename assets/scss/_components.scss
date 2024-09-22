@@ -75,3 +75,10 @@
     }
   }
 }
+
+@media screen and (min-width: pxToEm(600)) {
+  .social {
+    max-inline-size: pxToEm(384);
+    padding: $space-400;
+  }
+}
