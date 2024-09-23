@@ -63,7 +63,7 @@ h6 {
   font-weight: 400;
   line-height: 1.5;
 }
-.social__links--list-item--link,
+.social__links--link,
 .social__header--location {
   letter-spacing: 0;
   font-size: 0.875em;
@@ -95,12 +95,7 @@ h6 {
   width: 100%;
   margin-block-start: 1rem;
 }
-.social__links--list {
-  text-indent: 0;
-  padding: 0;
-  list-style-type: none;
-}
-.social__links--list-item--link {
+.social__links--link {
   color: #fff;
   text-align: center;
   background-color: #333;
@@ -110,7 +105,7 @@ h6 {
   text-decoration: none;
   display: block;
 }
-.social__links--list-item--link:is(:hover, :focus) {
+.social__links--link:is(:hover, :focus) {
   color: #141414;
   cursor: pointer;
   background-color: #c5f82a;
