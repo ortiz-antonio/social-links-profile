@@ -140,16 +140,8 @@ h6 {
   min-height: 100svh;
   display: flex;
 }
-main {
-  flex-direction: column;
-  align-items: center;
-  display: flex;
-}
 body {
   color: #fff;
   background-color: #141414;
   font-family: Inter, system-ui;
-}
-main {
-  inline-size: 100%;
 }
