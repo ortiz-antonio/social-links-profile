@@ -74,9 +74,8 @@ h6 {
   background-color: #1f1f1f;
   border: 0 solid #1f1f1f;
   border-radius: 12px;
-  inline-size: 100%;
-  max-inline-size: 20.4375em;
-  padding: 1.5rem;
+  inline-size: clamp(327px, 20.4375rem + 57000vw - 284943px, 384px);
+  padding: clamp(24px, 1.5rem + 16000vw - 79984px, 40px);
 }
 .social__avatar {
   border-radius: 50%;
@@ -126,12 +125,6 @@ h6 {
 .attribution__content--fm,
 .attribution__content--ortiz {
   color: #c5f82a;
-}
-@media screen and (width>=37.5em) {
-  .social {
-    max-inline-size: 24em;
-    padding: 2.5rem;
-  }
 }
 .container {
   flex-direction: column;
