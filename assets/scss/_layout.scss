@@ -1,9 +1,5 @@
 // center all page
 
-body {
-  @include center;
-}
-
 main {
-  @include center-h;
+  @include center;
 }
