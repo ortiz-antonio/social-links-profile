@@ -1,5 +1,9 @@
 // center all page
 
-main {
+.container {
   @include center;
+}
+
+main {
+  @include center-h;
 }
