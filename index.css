@@ -117,6 +117,7 @@ h6 {
 }
 .footer {
   margin-top: 1.5rem;
+  position: relative;
 }
 .attribution {
   margin-inline: 1.5rem;
@@ -137,12 +138,25 @@ h6 {
     padding: 2.5rem;
   }
 }
-body {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100%;
-  display: flex;
+@media screen and (orientation: portrait) {
+  body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+  }
+}
+@media screen and (width>=960px) {
+  body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+  }
 }
 main {
   flex-direction: column;
