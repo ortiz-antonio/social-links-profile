@@ -1,14 +1,15 @@
 @import 'base';
 
 .social {
-  inline-size: pxToEm(327);
+  inline-size: clamp(
+    327px,
+    calc(20.4375rem + (384 - 327) * ((100vw - 499.9px) / (500 - 499.9))),
+    384px
+  );
   padding: clamp(
-    1.5rem,
-    calc(
-      1.5rem + ($space-400 - $space-300) *
-        ((100vw - 31.2438rem) / (31.25 - 31.2438))
-    ),
-    2.5rem
+    24px,
+    calc(1.5rem + (40 - 24) * ((100vw - 499.9px) / (500 - 499.9))),
+    40px
   );
   background-color: $color-grey-800;
   border: 0px solid $color-grey-800;
