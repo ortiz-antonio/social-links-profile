@@ -1,9 +1,15 @@
 @import 'base';
 
 .social {
-  inline-size: 100%;
-  max-inline-size: pxToEm(327);
-  padding: $space-300;
+  inline-size: pxToEm(327);
+  padding: clamp(
+    1.5rem,
+    calc(
+      1.5rem + ($space-400 - $space-300) *
+        ((100vw - 31.2438rem) / (31.25 - 31.2438))
+    ),
+    2.5rem
+  );
   background-color: $color-grey-800;
   border: 0px solid $color-grey-800;
   border-radius: $radius-m;
@@ -69,12 +75,5 @@
     &--ortiz {
       color: $color-primary;
     }
-  }
-}
-
-@media screen and (min-width: pxToEm(600)) {
-  .social {
-    max-inline-size: pxToEm(384);
-    padding: $space-400;
   }
 }
