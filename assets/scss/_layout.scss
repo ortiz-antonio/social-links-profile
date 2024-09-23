@@ -1,6 +1,15 @@
 // center all page
-body {
-  @include center;
+
+@media screen and (orientation: portrait) {
+  body {
+    @include center;
+  }
+}
+
+@media screen and (min-width: 960) {
+  body {
+    @include center;
+  }
 }
 
 main {

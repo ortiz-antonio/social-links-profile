@@ -57,11 +57,11 @@
 
 .footer {
   margin-top: $space-300;
+  position: relative;
 }
 
 .attribution {
   margin-inline: $space-300;
-
   &__content {
     display: flex;
     flex-direction: row;
