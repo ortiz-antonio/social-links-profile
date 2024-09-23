@@ -31,26 +31,22 @@
   &__links {
     width: 100%;
     margin-block-start: $space-200;
-    &--list {
-      padding: 0;
-      text-indent: 0;
-      list-style-type: none;
-      &-item--link {
-        display: block;
-        margin: $space-200;
-        padding: 0.75em;
-        color: $color-secondary;
-        @extend %font-body-bold;
-        text-align: center;
-        text-decoration: none;
-        background-color: $color-grey-700;
-        border-radius: $radius-s;
-      }
-      &-item--link:is(:hover, :focus) {
-        color: $color-grey-900;
-        background-color: $color-primary;
-        cursor: pointer;
-      }
+
+    &--link {
+      display: block;
+      margin: $space-200;
+      padding: 0.75em;
+      color: $color-secondary;
+      @extend %font-body-bold;
+      text-align: center;
+      text-decoration: none;
+      background-color: $color-grey-700;
+      border-radius: $radius-s;
+    }
+    &--link:is(:hover, :focus) {
+      color: $color-grey-900;
+      background-color: $color-primary;
+      cursor: pointer;
     }
   }
 }

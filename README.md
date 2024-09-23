@@ -50,3 +50,7 @@ I practiced Responsive Web Design more
 
 - Website - [Antonio Ortiz](https://ortiz.studio)
 - Frontend Mentor - [@ortiz-antonio](https://www.frontendmentor.io/profile/ortiz-antonio)
+
+## Acknowledgments
+
+Thanks to [@grace-snow](https://www.frontendmentor.io/profile/grace-snow) for explaining the svh unit and how I was using accessibility landmarks incorrectly.
