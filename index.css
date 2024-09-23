@@ -138,25 +138,12 @@ h6 {
     padding: 2.5rem;
   }
 }
-@media screen and (orientation: portrait) {
-  body {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    min-height: 100vh;
-    display: flex;
-  }
-}
-@media screen and (width>=960px) {
-  body {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    min-height: 100vh;
-    display: flex;
-  }
+body {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
 }
 main {
   flex-direction: column;
