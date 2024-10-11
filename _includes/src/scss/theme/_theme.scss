@@ -1,0 +1,23 @@
+@use "sass:map";
+@use "../utils/variables";
+
+$theme-colors: (
+  "primary": (
+    "light": #{var(--primary)},
+  ),
+  "accent": (
+    "light": #{var(--accent)},
+  ),
+  "background": (
+    "light": #{var(--background)},
+  ),
+  "background-accent": (
+    "light": #{var(--background-accent)},
+  ),
+);
+
+@function color($key: "primary", $variant: "light") {
+  $map: map.get($theme-colors, $key);
+
+  @return map.get($map, $variant);
+}

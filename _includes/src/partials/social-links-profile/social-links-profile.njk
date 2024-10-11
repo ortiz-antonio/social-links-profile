@@ -1,0 +1,26 @@
+
+{% macro socialLinksProfile(content) %}
+<section class="social">
+  <img
+    class="social__avatar"
+    src="{{content.img}}"
+    alt=""
+  />
+
+  <div class="social__header">
+    <h1 class="social__header--name">{{content.name}}</h1>
+    <h2 class="social__header--location"> {{content.location}}</h2>
+    <p class="social__header--quote">
+      <q>{{content.quote}}</q>
+    </p>
+  </div>
+
+  <div class="social__links">
+    <a class="social__links--link" href="{{content.links.github}}">GitHub</a>
+    <a class="social__links--link" href="{{content.links.frontendMentor}}">Frontend Mentor</a>
+    <a class="social__links--link" href="{{content.links.linkedIn}}">LinkedIn</a>
+    <a class="social__links--link" href="{{content.links.twitter}}">Twitter</a>
+    <a class="social__links--link" href="{{content.links.instagram}}">Instagram</a>
+  </div>
+</section>
+{% endmacro %}

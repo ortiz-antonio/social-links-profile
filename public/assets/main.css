@@ -1,0 +1,200 @@
+:root {
+  --container-mobile-width: 20.4375rem;
+  --container-desktop-width: 24rem;
+  --space-500: 1.5rem;
+  --space-400: 1rem;
+  --space-300: 0.75rem;
+  --space-200: 0.375rem;
+  --space-100: 0.25rem;
+  --font-family: figtree, sans-serif;
+  --primary: hsl(0deg 0% 7%);
+  --accent: hsl(0deg 0% 42%);
+  --background-accent: hsl(47deg 88% 63%);
+  --background: hsl(0deg 0% 100%);
+  --title-font-size: 1.25rem;
+  --title-font-size-desktop: 1.5rem;
+  --title-weight: 800;
+  --title-line-height: 1.5;
+  --title-letter-spacing: 0;
+  --body-font-size: 0.875rem;
+  --body-font-size-desktop: 1rem;
+  --body-weight: 500;
+  --body-line-height: 1.5;
+  --body-letter-spacing: 0;
+  --tag-font-size: 0.75rem;
+  --tag-font-size-desktop: 0.875rem;
+  --tag-weight: 500;
+  --tag-line-height: 1.5;
+  --tag-letter-spacing: 0;
+  --tag-b-font-size: 0.75rem;
+  --tag-b-font-size-desktop: 0.875rem;
+  --tag-b-weight: 800;
+  --tag-b-line-height: 1.5;
+  --tag-b-letter-spacing: 0;
+  --author-font-size: 0.875rem;
+  --author-weight: 800;
+  --author-line-height: 1.5;
+  --author-letter-spacing: 0;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+/* stylelint-disable */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* stylelint-enable */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@font-face {
+  font-family: FigTree;
+  font-display: swap;
+  src: url("fonts/Figtree-VariableFont_wght.ttf");
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  background-color: hsl(0deg 0% 8%);
+  color: hsl(0deg 0% 100%);
+  padding: 15px;
+}
+
+.footer {
+  margin-top: var(--space-500);
+}
+
+.social {
+  inline-size: clamp(327px, 20.4375rem + 57 * (100vw - 499.9px) / 0.1, 384px);
+  padding: clamp(24px, 1.5rem + 16 * (100vw - 499.9px) / 0.1, 40px);
+  background-color: hsl(0deg 0% 12%);
+  border: 0 solid hsl(0deg 0% 12%);
+  border-radius: 12px;
+}
+
+.social__avatar {
+  max-inline-size: pxtoem(88);
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.social__header {
+  margin-block-start: 1.5rem;
+  text-align: center;
+}
+
+.social__header--location {
+  color: hsl(75deg 94% 57%);
+  margin-block-end: 1.5rem;
+}
+
+.social__links {
+  width: 100%;
+  margin-block-start: 1rem;
+}
+
+.social__links--link {
+  display: block;
+  margin: 1rem;
+  padding: 0.75em;
+  color: hsl(0deg 0% 100%);
+  text-align: center;
+  text-decoration: none;
+  background-color: hsl(0deg 0% 20%);
+  border-radius: 8px;
+}
+
+.social__links--link:is(:hover, :focus) {
+  color: hsl(0deg 0% 8%);
+  background-color: hsl(75deg 94% 57%);
+  cursor: pointer;
+}
+
+.attribution {
+  text-align: center;
+}
+
+.attribution__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.attribution__content--fm,
+.attribution__content--ortiz {
+  color: var(--primary);
+}

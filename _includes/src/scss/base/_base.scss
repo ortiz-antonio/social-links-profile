@@ -1,0 +1,29 @@
+@use "../theme/theme";
+@use "../theme/typography";
+@use "../utils/variables";
+
+@mixin center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+}
+
+@font-face {
+  font-family: FigTree;
+  font-display: swap;
+  src: url("fonts/Figtree-VariableFont_wght.ttf");
+}
+
+.container {
+  @include center-content;
+
+  background-color: variables.$color-bg;
+  color: variables.$color-secondary;
+  padding: 15px;
+}
+
+.footer {
+  margin-top: #{var(--space-500)};
+}

@@ -1,0 +1,67 @@
+@use "../../scss/utils/variables";
+
+.social {
+  inline-size: clamp(
+    327px,
+    calc(20.4375rem + (384 - 327) * ((100vw - 499.9px) / (500 - 499.9))),
+    384px
+  );
+  padding: clamp(
+    24px,
+    calc(1.5rem + (40 - 24) * ((100vw - 499.9px) / (500 - 499.9))),
+    40px
+  );
+  background-color: variables.$color-grey-800;
+  border: 0 solid variables.$color-grey-800;
+  border-radius: variables.$radius-m;
+
+  &__avatar {
+    max-inline-size: pxtoem(88);
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  &__header {
+    margin-block-start: variables.$space-300;
+    text-align: center;
+
+    &--name {
+      //   @extend %font-heading;
+    }
+
+    &--location {
+      color: variables.$color-primary;
+
+      //   @extend %font-body-bold;
+      margin-block-end: variables.$space-300;
+    }
+
+    &--quote {
+      //   @extend %font-body;
+    }
+  }
+
+  &__links {
+    width: 100%;
+    margin-block-start: variables.$space-200;
+
+    &--link {
+      display: block;
+      margin: variables.$space-200;
+      padding: 0.75em;
+      color: variables.$color-secondary;
+
+      //   @extend %font-body-bold;
+      text-align: center;
+      text-decoration: none;
+      background-color: variables.$color-grey-700;
+      border-radius: variables.$radius-s;
+    }
+
+    &--link:is(:hover, :focus) {
+      color: variables.$color-grey-900;
+      background-color: variables.$color-primary;
+      cursor: pointer;
+    }
+  }
+}
