@@ -2,28 +2,18 @@
 @use "../theme/typography";
 @use "../utils/variables";
 
-@mixin center-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100svh;
-}
-
 @font-face {
-  font-family: FigTree;
+  font-family: Inter;
   font-display: swap;
-  src: url("fonts/Figtree-VariableFont_wght.ttf");
+  src: url("fonts/Inter-VariableFont_slnt,wght.ttf");
 }
 
 .container {
-  @include center-content;
-
-  background-color: variables.$color-bg;
-  color: variables.$color-secondary;
-  padding: 15px;
-}
-
-.footer {
-  margin-top: #{var(--space-500)};
+  display: grid;
+  place-items: center;
+  min-height: 100svh;
+  font-family: #{var(--font-family)};
+  background-color: #{theme.color("background-page")};
+  color: #{theme.color("primary")};
+  padding: 2px;
 }

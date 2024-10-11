@@ -2,11 +2,11 @@
   --space-24: 1.5rem;
   --space-16: 1rem;
   --font-family: inter, system-ui;
-  --primary: hsl(0deg 0% 100%);
-  --accent: hsl(75deg 94% 57%);
-  --background-accent: hsl(0deg 0% 20%);
-  --background: hsl(0deg 0% 12%);
-  --background-page: hsl(0deg 0% 8%);
+  --primary: hsl(0, 0%, 100%);
+  --accent: hsl(75, 94%, 57%);
+  --background-accent: hsl(0, 0%, 20%);
+  --background: hsl(0, 0%, 12%);
+  --background-page: hsl(0, 0%, 8%);
   --title-font-size: 1.5rem;
   --title-weight: 600;
   --title-line-height: 1.5;
@@ -16,103 +16,6 @@
   --body-line-height: 1.5;
   --body-letter-spacing: 0;
   --body-bold-weight: 700;
-}
-
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/*
-  2. Remove default margin
-*/
-* {
-  margin: 0;
-}
-
-/*
-  Typographic tweaks!
-  3. Add accessible line-height
-  4. Improve text rendering
-*/
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-/*
-  5. Improve media defaults
-*/
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-/*
-  6. Remove built-in form typography styles
-*/
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/*
-  7. Avoid text overflows
-*/
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-/*
-  8. Create a root stacking context
-*/
-/* stylelint-disable */
-#root,
-#__next {
-  isolation: isolate;
-}
-
-/* stylelint-enable */
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-@font-face {
-  font-family: Inter;
-  font-display: swap;
-  src: url("fonts/Inter-VariableFont_slnt,wght.ttf");
-}
-
-.container {
-  display: grid;
-  place-items: center;
-  min-height: 100svh;
-  font-family: var(--font-family);
-  background-color: var(--background-page);
-  color: var(--primary);
-  padding: 2px;
 }
 
 .social {
@@ -176,23 +79,8 @@ h6 {
   background-color: var(--background-accent);
   border-radius: 8px;
 }
-
 .social__links--link:is(:hover, :focus) {
   color: var(--background);
   background-color: var(--accent);
   cursor: pointer;
-}
-
-.attribution {
-  text-align: center;
-}
-
-.attribution__content {
-  display: flex;
-  flex-direction: column;
-}
-
-.attribution__content--fm,
-.attribution__content--ortiz {
-  color: var(--primary);
 }

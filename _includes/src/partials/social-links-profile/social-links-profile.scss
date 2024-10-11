@@ -1,4 +1,7 @@
 @use "../../scss/utils/variables";
+@use "../../scss/theme/theme";
+@use "../../scss/theme/typography";
+@use "../../scss/utils/functions";
 
 .social {
   inline-size: clamp(
@@ -11,57 +14,59 @@
     calc(1.5rem + (40 - 24) * ((100vw - 499.9px) / (500 - 499.9))),
     40px
   );
-  background-color: variables.$color-grey-800;
-  border: 0 solid variables.$color-grey-800;
+  background-color: #{theme.color("background")};
+  border: 0 solid #{theme.color("background")};
   border-radius: variables.$radius-m;
+}
 
-  &__avatar {
-    max-inline-size: pxtoem(88);
-    border-radius: 50%;
-    margin: 0 auto;
-  }
+.social__avatar {
+  max-inline-size: #{functions.px-to-rem(88px)};
+  border-radius: 50%;
+  margin: 0 auto;
+}
 
-  &__header {
-    margin-block-start: variables.$space-300;
-    text-align: center;
+.social__header {
+  margin-block-start: variables.$space-24;
+  text-align: center;
+}
 
-    &--name {
-      //   @extend %font-heading;
-    }
+.social__header--name {
+  @include typography.size("title");
+}
 
-    &--location {
-      color: variables.$color-primary;
+.social__header--location {
+  color: #{theme.color("accent")};
 
-      //   @extend %font-body-bold;
-      margin-block-end: variables.$space-300;
-    }
+  @include typography.size("body-bold");
 
-    &--quote {
-      //   @extend %font-body;
-    }
-  }
+  margin-block-end: variables.$space-24;
+}
 
-  &__links {
-    width: 100%;
-    margin-block-start: variables.$space-200;
+.social__header--quote {
+  @include typography.size("body");
+}
 
-    &--link {
-      display: block;
-      margin: variables.$space-200;
-      padding: 0.75em;
-      color: variables.$color-secondary;
+.social__links {
+  width: 100%;
+  margin-block-start: variables.$space-16;
+}
 
-      //   @extend %font-body-bold;
-      text-align: center;
-      text-decoration: none;
-      background-color: variables.$color-grey-700;
-      border-radius: variables.$radius-s;
-    }
+.social__links--link {
+  display: block;
+  margin: variables.$space-16;
+  padding: 0.75em;
+  color: #{theme.color("primary")};
 
-    &--link:is(:hover, :focus) {
-      color: variables.$color-grey-900;
-      background-color: variables.$color-primary;
-      cursor: pointer;
-    }
+  @include typography.size("body-bold");
+
+  text-align: center;
+  text-decoration: none;
+  background-color: #{theme.color("background-accent")};
+  border-radius: variables.$radius-s;
+
+  &:is(:hover, :focus) {
+    color: #{theme.color("background")};
+    background-color: #{theme.color("accent")};
+    cursor: pointer;
   }
 }

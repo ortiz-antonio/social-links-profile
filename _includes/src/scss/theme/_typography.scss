@@ -15,23 +15,11 @@ $settings: (
     line-height: #{var(--body-line-height)},
     letter-spacing: #{var(--body-letter-spacing)},
   ),
-  "tag": (
-    font-size: #{var(--tag-font-size)},
-    weight: #{var(--tag-weight)},
-    line-height: #{var(--tag-line-height)},
-    letter-spacing: #{var(--tag-letter-spacing)},
-  ),
-  "tag-bold": (
-    font-size: #{var(--tag-b-font-size)},
-    weight: #{var(--tag-b-weight)},
-    line-height: #{var(--tag-b-line-height)},
-    letter-spacing: #{var(--tag-b-letter-spacing)},
-  ),
-  "author": (
-    font-size: #{var(--author-font-size)},
-    weight: #{var(--author-weight)},
-    line-height: #{var(--author-line-height)},
-    letter-spacing: #{var(--author-letter-spacing)},
+  "body-bold": (
+    font-size: #{var(--body-font-size)},
+    weight: #{var(--body-bold-weight)},
+    line-height: #{var(--body-line-height)},
+    letter-spacing: #{var(--body-letter-spacing)},
   ),
 );
 
