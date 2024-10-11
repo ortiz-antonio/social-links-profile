@@ -5,14 +5,22 @@
 
 .social {
   inline-size: clamp(
-    327px,
-    calc(20.4375rem + (384 - 327) * ((100vw - 499.9px) / (500 - 499.9))),
-    384px
+    #{variables.$container-mobile},
+    calc(
+      #{variables.$container-mobile} + (
+          #{variables.$container-desktop-unitless} - #{variables.$container-mobile-unitless}
+        ) * ((100vw - #{variables.$container-breakpoint}) / (0.1))
+    ),
+    #{variables.$container-desktop}
   );
   padding: clamp(
-    24px,
-    calc(1.5rem + (40 - 24) * ((100vw - 499.9px) / (500 - 499.9))),
-    40px
+    #{variables.$container-mobile-padding},
+    calc(
+      #{variables.$container-mobile-padding} + (
+          #{variables.$container-desktop-unitless} - #{variables.$container-mobile-unitless}
+        ) * ((100vw - #{variables.$container-breakpoint}) / (0.1))
+    ),
+    #{variables.$container-desktop-padding}
   );
   background-color: #{theme.color("background")};
   border: 0 solid #{theme.color("background")};

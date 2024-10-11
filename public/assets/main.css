@@ -1,6 +1,4 @@
 :root {
-  --space-24: 1.5rem;
-  --space-16: 1rem;
   --font-family: inter, system-ui;
   --primary: hsl(0deg 0% 100%);
   --accent: hsl(75deg 94% 57%);
@@ -116,8 +114,16 @@ h6 {
 }
 
 .social {
-  inline-size: clamp(327px, 20.4375rem + 57 * (100vw - 499.9px) / 0.1, 384px);
-  padding: clamp(24px, 1.5rem + 16 * (100vw - 499.9px) / 0.1, 40px);
+  inline-size: clamp(
+    20.4375rem,
+    20.4375rem + (24 - 20.4375) * (100vw - 37.5rem) / 0.1,
+    24rem
+  );
+  padding: clamp(
+    1.5rem,
+    1.5rem + (24 - 20.4375) * (100vw - 37.5rem) / 0.1,
+    2.5rem
+  );
   background-color: var(--background);
   border: 0 solid var(--background);
   border-radius: 12px;

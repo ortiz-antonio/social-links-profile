@@ -12,11 +12,15 @@ $space-16: #{functions.px-to-rem(16px)};
 $radius-m: 12px;
 $radius-s: 8px;
 $font-family: inter, system-ui;
+$container-mobile: #{functions.px-to-rem(327px)};
+$container-mobile-unitless: #{functions.px-to-rel(327px)};
+$container-mobile-padding: #{functions.px-to-rem(24px)};
+$container-desktop: #{functions.px-to-rem(384px)};
+$container-desktop-unitless: #{functions.px-to-rel(384px)};
+$container-desktop-padding: #{functions.px-to-rem(40px)};
+$container-breakpoint: #{functions.px-to-rem(600px)};
 
 :root {
-  // --space-400: #{functions.px-to-rem(16px)};
-  --space-24: #{$space-24};
-  --space-16: #{$space-16};
   --font-family: #{$font-family};
 
   // colors
