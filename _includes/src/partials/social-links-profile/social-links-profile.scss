@@ -25,6 +25,7 @@
   background-color: #{theme.color("background")};
   border: 0 solid #{theme.color("background")};
   border-radius: variables.$radius-m;
+  text-align: center;
 }
 
 .social__avatar {
@@ -33,16 +34,13 @@
   margin: 0 auto;
 }
 
-.social__header {
+.social--name {
   margin-block-start: #{var(--space-m)};
-  text-align: center;
-}
 
-.social__header--name {
   @include typography.size("title");
 }
 
-.social__header--location {
+.social--location {
   color: #{theme.color("accent")};
 
   @include typography.size("body-bold");
@@ -50,7 +48,7 @@
   margin-block-end: #{var(--space-m)};
 }
 
-.social__header--quote {
+.social--quote {
   @include typography.size("body");
 }
 
@@ -67,7 +65,6 @@
 
   @include typography.size("body-bold");
 
-  text-align: center;
   text-decoration: none;
   background-color: #{theme.color("background-accent")};
   border-radius: variables.$radius-s;

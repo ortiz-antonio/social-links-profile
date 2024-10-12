@@ -129,6 +129,7 @@ h6 {
   background-color: var(--background);
   border: 0 solid var(--background);
   border-radius: 12px;
+  text-align: center;
 }
 
 .social__avatar {
@@ -137,19 +138,15 @@ h6 {
   margin: 0 auto;
 }
 
-.social__header {
+.social--name {
   margin-block-start: var(--space-m);
-  text-align: center;
-}
-
-.social__header--name {
   font-size: var(--title-font-size);
   font-weight: var(--title-weight);
   line-height: var(--title-line-height);
   letter-spacing: var(--title-letter-spacing);
 }
 
-.social__header--location {
+.social--location {
   color: var(--accent);
   font-size: var(--body-font-size);
   font-weight: var(--body-bold-weight);
@@ -158,7 +155,7 @@ h6 {
   margin-block-end: var(--space-m);
 }
 
-.social__header--quote {
+.social--quote {
   font-size: var(--body-font-size);
   font-weight: var(--body-weight);
   line-height: var(--body-line-height);
@@ -179,7 +176,6 @@ h6 {
   font-weight: var(--body-bold-weight);
   line-height: var(--body-line-height);
   letter-spacing: var(--body-letter-spacing);
-  text-align: center;
   text-decoration: none;
   background-color: var(--background-accent);
   border-radius: 8px;
