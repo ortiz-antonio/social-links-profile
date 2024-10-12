@@ -9,7 +9,7 @@
     calc(
       #{variables.$container-mobile} + (
           #{variables.$container-desktop-unitless} - #{variables.$container-mobile-unitless}
-        ) * ((100vw - #{variables.$container-breakpoint}) / (0.1))
+        ) * max(0, ((100vw - #{variables.$container-breakpoint}) / (0.1)))
     ),
     #{variables.$container-desktop}
   );
@@ -34,7 +34,7 @@
 }
 
 .social__header {
-  margin-block-start: variables.$space-24;
+  margin-block-start: #{var(--space-m)};
   text-align: center;
 }
 
@@ -47,7 +47,7 @@
 
   @include typography.size("body-bold");
 
-  margin-block-end: variables.$space-24;
+  margin-block-end: #{var(--space-m)};
 }
 
 .social__header--quote {
@@ -56,12 +56,12 @@
 
 .social__links {
   width: 100%;
-  margin-block-start: variables.$space-16;
+  margin-block-start: #{var(--space-s)};
 }
 
 .social__links--link {
   display: block;
-  margin: variables.$space-16;
+  margin-block: #{var(--space-s)};
   padding: 0.75em;
   color: #{theme.color("primary")};
 

@@ -1,5 +1,7 @@
 :root {
   --font-family: inter, system-ui;
+  --space-s: 1rem;
+  --space-m: 1.5rem;
   --primary: hsl(0deg 0% 100%);
   --accent: hsl(75deg 94% 57%);
   --background-accent: hsl(0deg 0% 20%);
@@ -113,17 +115,17 @@ h6 {
   padding: 2px;
 }
 
+.footer {
+  margin-block-start: var(--space-m);
+}
+
 .social {
   inline-size: clamp(
     20.4375rem,
-    20.4375rem + (24 - 20.4375) * (100vw - 37.5rem) / 0.1,
+    20.4375rem + (24 - 20.4375) * max(0, (100vw - 37.5rem) / 0.1),
     24rem
   );
-  padding: clamp(
-    1.5rem,
-    1.5rem + (24 - 20.4375) * (100vw - 37.5rem) / 0.1,
-    2.5rem
-  );
+  padding: clamp(24px, 24px + (24 - 20.4375) * (100vw - 37.5rem) / 0.1, 40px);
   background-color: var(--background);
   border: 0 solid var(--background);
   border-radius: 12px;
@@ -136,7 +138,7 @@ h6 {
 }
 
 .social__header {
-  margin-block-start: 1.5rem;
+  margin-block-start: var(--space-m);
   text-align: center;
 }
 
@@ -153,7 +155,7 @@ h6 {
   font-weight: var(--body-bold-weight);
   line-height: var(--body-line-height);
   letter-spacing: var(--body-letter-spacing);
-  margin-block-end: 1.5rem;
+  margin-block-end: var(--space-m);
 }
 
 .social__header--quote {
@@ -165,12 +167,12 @@ h6 {
 
 .social__links {
   width: 100%;
-  margin-block-start: 1rem;
+  margin-block-start: var(--space-s);
 }
 
 .social__links--link {
   display: block;
-  margin: 1rem;
+  margin-block: var(--space-s);
   padding: 0.75em;
   color: var(--primary);
   font-size: var(--body-font-size);

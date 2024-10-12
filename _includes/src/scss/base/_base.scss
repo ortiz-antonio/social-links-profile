@@ -17,3 +17,7 @@
   color: #{theme.color("primary")};
   padding: 2px;
 }
+
+.footer {
+  margin-block-start: #{var(--space-m)};
+}
