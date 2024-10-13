@@ -181,10 +181,15 @@ h6 {
   border-radius: 8px;
 }
 
-.social__links--link:is(:hover, :focus) {
+.social__links--link:hover {
   color: var(--background);
   background-color: var(--accent);
   cursor: pointer;
+}
+
+.social__links--link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .attribution {
