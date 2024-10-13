@@ -9,11 +9,11 @@
   --font-family: inter, system-ui;
   --space-s: 1rem;
   --space-m: 1.5rem;
-  --primary: hsl(0deg 0% 100%);
-  --accent: hsl(75deg 94% 57%);
-  --background-accent: hsl(0deg 0% 20%);
-  --background: hsl(0deg 0% 12%);
-  --background-page: hsl(0deg 0% 8%);
+  --primary: hsl(0, 0%, 100%);
+  --accent: hsl(75, 94%, 57%);
+  --background-accent: hsl(0, 0%, 20%);
+  --background: hsl(0, 0%, 12%);
+  --background-page: hsl(0, 0%, 8%);
   --title-font-size: 1.5rem;
   --title-weight: 600;
   --title-line-height: 1.5;
@@ -111,7 +111,6 @@ h6 {
   font-display: swap;
   src: url("fonts/Inter-VariableFont_slnt,wght.ttf");
 }
-
 .container {
   display: grid;
   place-items: center;
@@ -127,20 +126,8 @@ h6 {
 }
 
 .social {
-  inline-size: clamp(
-    var(--container-mobile),
-    var(--container-mobile) +
-      (var(--container-desktop-unitless) - var(--container-mobile-unitless)) *
-      max(0, 100vw - var(--container-breakpoint)) / 0.1,
-    var(--container-desktop)
-  );
-  padding: clamp(
-    var(--container-mobile-padding),
-    var(--container-mobile-padding) +
-      (var(--container-desktop-unitless) - var(--container-mobile-unitless)) *
-      (100vw - var(--container-breakpoint)) / 0.1,
-    var(--container-desktop-padding)
-  );
+  inline-size: clamp(var(--container-mobile), var(--container-mobile) + (var(--container-desktop-unitless) - var(--container-mobile-unitless)) * max(0, 100vw - var(--container-breakpoint)) / 0.1, var(--container-desktop));
+  padding: clamp(var(--container-mobile-padding), var(--container-mobile-padding) + (var(--container-desktop-unitless) - var(--container-mobile-unitless)) * (100vw - var(--container-breakpoint)) / 0.1, var(--container-desktop-padding));
   background-color: var(--background);
   border: 0 solid var(--background);
   border-radius: 12px;
@@ -195,13 +182,11 @@ h6 {
   background-color: var(--background-accent);
   border-radius: 8px;
 }
-
 .social__links--link:hover {
   color: var(--background);
   background-color: var(--accent);
   cursor: pointer;
 }
-
 .social__links--link:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;

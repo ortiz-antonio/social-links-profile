@@ -27,7 +27,6 @@ Users should be able to:
 
 ### Links
 
-- Parent Project: [https://github.com/ortiz-antonio/frontend-mentor](https://github.com/ortiz-antonio/frontend-mentor)
 - Solution URL: [https://github.com/ortiz-antonio/social-links-profile/](https://github.com/ortiz-antonio/social-links-profile/)
 - Live Site URL: [https://ortiz-antonio.github.io/social-links-profile/](https://ortiz-antonio.github.io/social-links-profile/)
 
@@ -37,14 +36,14 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - SCSS
-- Pug
+- nunjucks
 - Flexbox
 - Mobile-first workflow
 - Taskfile
 
 ### What I learned
 
-I practiced Responsive Web Design more
+I practiced using clamp() functions and wrote custom Sass clamp function to avoid redundancy. Additionally, I hadn't previously used the :focus-visible pseudo-class.
 
 ## Author
 
