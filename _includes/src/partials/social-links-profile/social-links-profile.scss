@@ -69,9 +69,14 @@
   background-color: #{theme.color("background-accent")};
   border-radius: variables.$radius-s;
 
-  &:is(:hover, :focus) {
+  &:hover {
     color: #{theme.color("background")};
     background-color: #{theme.color("accent")};
     cursor: pointer;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #{theme.color("accent")};
+    outline-offset: 2px;
   }
 }
