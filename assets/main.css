@@ -1,4 +1,11 @@
 :root {
+  --container-mobile: 20.4375rem;
+  --container-mobile-unitless: 20.4375;
+  --container-desktop: 24rem;
+  --container-desktop-unitless: 24;
+  --container-breakpoint: 37.5rem;
+  --container-mobile-padding: 24px;
+  --container-desktop-padding: 40px;
   --font-family: inter, system-ui;
   --space-s: 1rem;
   --space-m: 1.5rem;
@@ -121,11 +128,19 @@ h6 {
 
 .social {
   inline-size: clamp(
-    20.4375rem,
-    20.4375rem + (24 - 20.4375) * max(0, (100vw - 37.5rem) / 0.1),
-    24rem
+    var(--container-mobile),
+    var(--container-mobile) +
+      (var(--container-desktop-unitless) - var(--container-mobile-unitless)) *
+      max(0, 100vw - var(--container-breakpoint)) / 0.1,
+    var(--container-desktop)
   );
-  padding: clamp(24px, 24px + (24 - 20.4375) * (100vw - 37.5rem) / 0.1, 40px);
+  padding: clamp(
+    var(--container-mobile-padding),
+    var(--container-mobile-padding) +
+      (var(--container-desktop-unitless) - var(--container-mobile-unitless)) *
+      (100vw - var(--container-breakpoint)) / 0.1,
+    var(--container-desktop-padding)
+  );
   background-color: var(--background);
   border: 0 solid var(--background);
   border-radius: 12px;
