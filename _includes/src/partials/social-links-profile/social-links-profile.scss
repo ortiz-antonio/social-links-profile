@@ -4,23 +4,20 @@
 @use "../../scss/utils/functions";
 
 .social {
-  inline-size: clamp(
-    #{variables.$container-mobile},
-    calc(
-      #{variables.$container-mobile} + (
-          #{variables.$container-desktop-unitless} - #{variables.$container-mobile-unitless}
-        ) * max(0, ((100vw - #{variables.$container-breakpoint}) / (0.1)))
-    ),
-    #{variables.$container-desktop}
+  inline-size: functions.responsive-clamp(
+    var(--container-mobile),
+    var(--container-mobile-unitless),
+    var(--container-desktop-unitless),
+    var(--container-breakpoint),
+    var(--container-desktop),
+    true
   );
-  padding: clamp(
-    #{variables.$container-mobile-padding},
-    calc(
-      #{variables.$container-mobile-padding} + (
-          #{variables.$container-desktop-unitless} - #{variables.$container-mobile-unitless}
-        ) * ((100vw - #{variables.$container-breakpoint}) / (0.1))
-    ),
-    #{variables.$container-desktop-padding}
+  padding: functions.responsive-clamp(
+    var(--container-mobile-padding),
+    var(--container-mobile-unitless),
+    var(--container-desktop-unitless),
+    var(--container-breakpoint),
+    var(--container-desktop-padding)
   );
   background-color: #{theme.color("background")};
   border: 0 solid #{theme.color("background")};

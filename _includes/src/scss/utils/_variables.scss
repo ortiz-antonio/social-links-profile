@@ -14,13 +14,20 @@ $radius-s: 8px;
 $font-family: inter, system-ui;
 $container-mobile: #{functions.px-to-rem(327px)};
 $container-mobile-unitless: #{functions.px-to-rel(327px)};
-$container-mobile-padding: 24px;
 $container-desktop: #{functions.px-to-rem(384px)};
 $container-desktop-unitless: #{functions.px-to-rel(384px)};
-$container-desktop-padding: 40px;
 $container-breakpoint: #{functions.px-to-rem(600px)};
+$container-mobile-padding: 24px;
+$container-desktop-padding: 40px;
 
 :root {
+  --container-mobile: #{$container-mobile};
+  --container-mobile-unitless: #{$container-mobile-unitless};
+  --container-desktop: #{$container-desktop};
+  --container-desktop-unitless: #{$container-desktop-unitless};
+  --container-breakpoint: #{$container-breakpoint};
+  --container-mobile-padding: #{$container-mobile-padding};
+  --container-desktop-padding: #{$container-desktop-padding};
   --font-family: #{$font-family};
   --space-s: #{$space-16};
   --space-m: #{$space-24};

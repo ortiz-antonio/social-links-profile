@@ -25,3 +25,63 @@ $base-font-size: 16px;
 
   @return $number;
 }
+
+@function responsive-clamp(
+  $min,
+  $min-unitless,
+  $max-unitless,
+  $breakpoint,
+  $max,
+  $positive-values: false
+) {
+  @if $positive-values {
+    @return responsive-clamp-positive(
+      $min,
+      $min-unitless,
+      $max-unitless,
+      $breakpoint,
+      $max
+    );
+  } @else {
+    @return responsive-clamp-negative(
+      $min,
+      $min-unitless,
+      $max-unitless,
+      $breakpoint,
+      $max
+    );
+  }
+}
+
+@function responsive-clamp-positive(
+  $min,
+  $min-unitless,
+  $max-unitless,
+  $breakpoint,
+  $max
+) {
+  // prettier-ignore
+  @return clamp(
+    $min,
+    calc(
+      #{$min} + ($max-unitless - $min-unitless) * max(0, (100vw - $breakpoint)) / (0.1)
+    ),
+    $max
+  );
+}
+
+@function responsive-clamp-negative(
+  $min,
+  $min-unitless,
+  $max-unitless,
+  $breakpoint,
+  $max
+) {
+  @return clamp(
+    $min,
+    calc(
+      #{$min} + ($max-unitless - $min-unitless) * (100vw - $breakpoint) / (0.1)
+    ),
+    $max
+  );
+}
