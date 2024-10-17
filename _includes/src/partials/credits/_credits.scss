@@ -13,4 +13,10 @@
 .attribution__content--fm,
 .attribution__content--ortiz {
   color: theme.color('primary');
+
+  &:focus-visible {
+    text-decoration: none;
+    outline-offset: 2px;
+    outline: 2px solid theme.color('accent');
+  }
 }

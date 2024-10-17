@@ -43,6 +43,7 @@ tasks:
       - _includes/**/*.njk
       - index.njk
       - _includes/src/**/*.{scss,njk}
+      - public/**/*.{html,css}
 
     cmds:
       - task: build:clean

@@ -3,27 +3,45 @@
     <img class="social__avatar" src="{{ content.img }}" alt="" />
 
     <h1 class="social--name">{{ content.name }}</h1>
-    <h2 class="social--location">{{ content.location }}</h2>
+    <p class="social--location">{{ content.location }}</p>
     <p class="social--quote">
       <q>{{ content.quote }}</q>
     </p>
 
-    <div class="social__links">
-      <a class="social__links--link" href="{{ content.links.github }}"
-        >GitHub</a
-      >
-      <a class="social__links--link" href="{{ content.links.frontendMentor }}"
-        >Frontend Mentor</a
-      >
-      <a class="social__links--link" href="{{ content.links.linkedIn }}"
-        >LinkedIn</a
-      >
-      <a class="social__links--link" href="{{ content.links.twitter }}"
-        >Twitter</a
-      >
-      <a class="social__links--link" href="{{ content.links.instagram }}"
-        >Instagram</a
-      >
-    </div>
+    <ul class="social__links">
+      <li class="social__links--item">
+        <a class="social__links--item--link" href="{{ content.links.github }}"
+          >GitHub</a
+        >
+      </li>
+
+      <li class="social__links--item">
+        <a
+          class="social__links--item--link"
+          href="{{ content.links.frontendMentor }}"
+          >Frontend Mentor</a
+        >
+      </li>
+
+      <li class="social__links--item">
+        <a class="social__links--item--link" href="{{ content.links.linkedIn }}"
+          >LinkedIn</a
+        >
+      </li>
+
+      <li class="social__links--item">
+        <a class="social__links--item--link" href="{{ content.links.twitter }}"
+          >Twitter</a
+        >
+      </li>
+
+      <li class="social__links--item">
+        <a
+          class="social__links--item--link"
+          href="{{ content.links.instagram }}"
+          >Instagram</a
+        >
+      </li>
+    </ul>
   </section>
 {% endmacro %}
