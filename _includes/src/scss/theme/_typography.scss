@@ -1,21 +1,21 @@
-@use "sass:map";
-@use "../utils/functions";
-@use "../utils/variables";
+@use 'sass:map';
+@use '../utils/functions';
+@use '../utils/variables';
 
 $settings: (
-  "title": (
+  'title': (
     font-size: #{var(--title-font-size)},
     weight: #{var(--title-weight)},
     line-height: #{var(--title-line-height)},
     letter-spacing: #{var(--title-letter-spacing)},
   ),
-  "body": (
+  'body': (
     font-size: #{var(--body-font-size)},
     weight: #{var(--body-weight)},
     line-height: #{var(--body-line-height)},
     letter-spacing: #{var(--body-letter-spacing)},
   ),
-  "body-bold": (
+  'body-bold': (
     font-size: #{var(--body-font-size)},
     weight: #{var(--body-bold-weight)},
     line-height: #{var(--body-line-height)},
@@ -30,8 +30,8 @@ $settings: (
 }
 
 @mixin size($size) {
-  font-size: get-setting("font-size", $size);
-  font-weight: get-setting("weight", $size);
-  line-height: get-setting("line-height", $size);
-  letter-spacing: get-setting("letter-spacing", $size);
+  font-size: get-setting('font-size', $size);
+  font-weight: get-setting('weight', $size);
+  line-height: get-setting('line-height', $size);
+  letter-spacing: get-setting('letter-spacing', $size);
 }

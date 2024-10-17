@@ -1,24 +1,29 @@
-
 {% macro socialLinksProfile(content) %}
-<section class="social">
-  <img
-    class="social__avatar"
-    src="{{content.img}}"
-    alt=""
-  />
+  <section class="social">
+    <img class="social__avatar" src="{{ content.img }}" alt="" />
 
-    <h1 class="social--name">{{content.name}}</h1>
-    <h2 class="social--location"> {{content.location}}</h2>
+    <h1 class="social--name">{{ content.name }}</h1>
+    <h2 class="social--location">{{ content.location }}</h2>
     <p class="social--quote">
-      <q>{{content.quote}}</q>
+      <q>{{ content.quote }}</q>
     </p>
 
-  <div class="social__links">
-    <a class="social__links--link" href="{{content.links.github}}">GitHub</a>
-    <a class="social__links--link" href="{{content.links.frontendMentor}}">Frontend Mentor</a>
-    <a class="social__links--link" href="{{content.links.linkedIn}}">LinkedIn</a>
-    <a class="social__links--link" href="{{content.links.twitter}}">Twitter</a>
-    <a class="social__links--link" href="{{content.links.instagram}}">Instagram</a>
-  </div>
-</section>
+    <div class="social__links">
+      <a class="social__links--link" href="{{ content.links.github }}"
+        >GitHub</a
+      >
+      <a class="social__links--link" href="{{ content.links.frontendMentor }}"
+        >Frontend Mentor</a
+      >
+      <a class="social__links--link" href="{{ content.links.linkedIn }}"
+        >LinkedIn</a
+      >
+      <a class="social__links--link" href="{{ content.links.twitter }}"
+        >Twitter</a
+      >
+      <a class="social__links--link" href="{{ content.links.instagram }}"
+        >Instagram</a
+      >
+    </div>
+  </section>
 {% endmacro %}

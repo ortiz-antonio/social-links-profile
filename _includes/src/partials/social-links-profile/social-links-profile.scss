@@ -1,7 +1,7 @@
-@use "../../scss/utils/variables";
-@use "../../scss/theme/theme";
-@use "../../scss/theme/typography";
-@use "../../scss/utils/functions";
+@use '../../scss/utils/variables';
+@use '../../scss/theme/theme';
+@use '../../scss/theme/typography';
+@use '../../scss/utils/functions';
 
 .social {
   inline-size: functions.responsive-clamp(
@@ -19,8 +19,8 @@
     var(--container-breakpoint),
     var(--container-desktop-padding)
   );
-  background-color: #{theme.color("background")};
-  border: 0 solid #{theme.color("background")};
+  background-color: #{theme.color('background')};
+  border: 0 solid #{theme.color('background')};
   border-radius: variables.$radius-m;
   text-align: center;
 }
@@ -34,19 +34,19 @@
 .social--name {
   margin-block-start: #{var(--space-m)};
 
-  @include typography.size("title");
+  @include typography.size('title');
 }
 
 .social--location {
-  color: #{theme.color("accent")};
+  color: #{theme.color('accent')};
 
-  @include typography.size("body-bold");
+  @include typography.size('body-bold');
 
   margin-block-end: #{var(--space-m)};
 }
 
 .social--quote {
-  @include typography.size("body");
+  @include typography.size('body');
 }
 
 .social__links {
@@ -58,22 +58,22 @@
   display: block;
   margin-block: #{var(--space-s)};
   padding: 0.75em;
-  color: #{theme.color("primary")};
+  color: #{theme.color('primary')};
 
-  @include typography.size("body-bold");
+  @include typography.size('body-bold');
 
   text-decoration: none;
-  background-color: #{theme.color("background-accent")};
+  background-color: #{theme.color('background-accent')};
   border-radius: variables.$radius-s;
 
   &:hover {
-    color: #{theme.color("background")};
-    background-color: #{theme.color("accent")};
+    color: #{theme.color('background')};
+    background-color: #{theme.color('accent')};
     cursor: pointer;
   }
 
   &:focus-visible {
-    outline: 2px solid #{theme.color("accent")};
+    outline: 2px solid #{theme.color('accent')};
     outline-offset: 2px;
   }
 }

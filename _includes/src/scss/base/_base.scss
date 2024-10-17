@@ -1,11 +1,11 @@
-@use "../theme/theme";
-@use "../theme/typography";
-@use "../utils/variables";
+@use '../theme/theme';
+@use '../theme/typography';
+@use '../utils/variables';
 
 @font-face {
   font-family: Inter;
   font-display: swap;
-  src: url("fonts/Inter-VariableFont_slnt,wght.ttf");
+  src: url('fonts/Inter-VariableFont_slnt,wght.ttf');
 }
 
 .container {
@@ -13,8 +13,8 @@
   place-items: center;
   min-height: 100svh;
   font-family: #{var(--font-family)};
-  background-color: #{theme.color("background-page")};
-  color: #{theme.color("primary")};
+  background-color: #{theme.color('background-page')};
+  color: #{theme.color('primary')};
   padding: 2px;
 }
 

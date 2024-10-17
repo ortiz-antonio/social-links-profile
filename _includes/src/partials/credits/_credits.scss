@@ -1,5 +1,5 @@
-@use "../../scss/theme/theme";
-@use "../../scss/theme/typography";
+@use '../../scss/theme/theme';
+@use '../../scss/theme/typography';
 
 .attribution {
   text-align: center;
@@ -12,5 +12,5 @@
 
 .attribution__content--fm,
 .attribution__content--ortiz {
-  color: theme.color("primary");
+  color: theme.color('primary');
 }
