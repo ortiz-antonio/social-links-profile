@@ -109,7 +109,7 @@ h6 {
 @font-face {
   font-family: Inter;
   font-display: swap;
-  src: url("fonts/Inter-VariableFont_slnt,wght.ttf");
+  src: url('fonts/Inter-VariableFont_slnt,wght.ttf');
 }
 .container {
   display: grid;
@@ -126,8 +126,20 @@ h6 {
 }
 
 .social {
-  inline-size: clamp(var(--container-mobile), var(--container-mobile) + (var(--container-desktop-unitless) - var(--container-mobile-unitless)) * max(0, 100vw - var(--container-breakpoint)) / 0.1, var(--container-desktop));
-  padding: clamp(var(--container-mobile-padding), var(--container-mobile-padding) + (var(--container-desktop-unitless) - var(--container-mobile-unitless)) * (100vw - var(--container-breakpoint)) / 0.1, var(--container-desktop-padding));
+  inline-size: clamp(
+    var(--container-mobile),
+    var(--container-mobile) +
+      (var(--container-desktop-unitless) - var(--container-mobile-unitless)) *
+      max(0, 100vw - var(--container-breakpoint)) / 0.1,
+    var(--container-desktop)
+  );
+  padding: clamp(
+    var(--container-mobile-padding),
+    var(--container-mobile-padding) +
+      (var(--container-desktop-unitless) - var(--container-mobile-unitless)) *
+      (100vw - var(--container-breakpoint)) / 0.1,
+    var(--container-desktop-padding)
+  );
   background-color: var(--background);
   border: 0 solid var(--background);
   border-radius: 12px;
