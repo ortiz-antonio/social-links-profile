@@ -1,11 +1,6 @@
 :root {
-  --container-mobile: 20.4375rem;
-  --container-mobile-unitless: 20.4375;
-  --container-desktop: 24rem;
-  --container-desktop-unitless: 24;
-  --container-breakpoint: 37.5rem;
-  --container-mobile-padding: 24px;
-  --container-desktop-padding: 40px;
+  --container-width: 20.4375rem;
+  --container-padding: 24px;
   --font-family: inter, system-ui;
   --space-s: 1rem;
   --space-m: 1.5rem;
@@ -109,7 +104,7 @@ h6 {
 @font-face {
   font-family: Inter;
   font-display: swap;
-  src: url('fonts/Inter-VariableFont_slnt,wght.ttf');
+  src: url("fonts/Inter-VariableFont_slnt,wght.ttf");
 }
 .container {
   display: grid;
@@ -126,20 +121,8 @@ h6 {
 }
 
 .social {
-  inline-size: clamp(
-    var(--container-mobile),
-    var(--container-mobile) +
-      (var(--container-desktop-unitless) - var(--container-mobile-unitless)) *
-      max(0, 100vw - var(--container-breakpoint)) / 0.1,
-    var(--container-desktop)
-  );
-  padding: clamp(
-    var(--container-mobile-padding),
-    var(--container-mobile-padding) +
-      (var(--container-desktop-unitless) - var(--container-mobile-unitless)) *
-      (100vw - var(--container-breakpoint)) / 0.1,
-    var(--container-desktop-padding)
-  );
+  max-inline-size: var(--container-width);
+  padding: var(--container-padding);
   background-color: var(--background);
   border: 0 solid var(--background);
   border-radius: 12px;
@@ -179,9 +162,11 @@ h6 {
 .social__links {
   width: 100%;
   margin-block-start: var(--space-s);
+  list-style: none;
+  padding-left: 0;
 }
 
-.social__links--link {
+.social__links--item--link {
   display: block;
   margin-block: var(--space-s);
   padding: 0.75em;
@@ -194,12 +179,12 @@ h6 {
   background-color: var(--background-accent);
   border-radius: 8px;
 }
-.social__links--link:hover {
+.social__links--item--link:hover {
   color: var(--background);
   background-color: var(--accent);
   cursor: pointer;
 }
-.social__links--link:focus-visible {
+.social__links--item--link:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
@@ -216,4 +201,10 @@ h6 {
 .attribution__content--fm,
 .attribution__content--ortiz {
   color: var(--primary);
+}
+.attribution__content--fm:focus-visible,
+.attribution__content--ortiz:focus-visible {
+  text-decoration: none;
+  outline-offset: 2px;
+  outline: 2px solid var(--accent);
 }
